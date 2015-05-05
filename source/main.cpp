@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <string>
+#include <strstream>
 
 int main()
 {
