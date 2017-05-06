@@ -35,7 +35,6 @@ set autoread
 let mapleader=","
 nnoremap <leader>w :w<cr>
 
-
 " regex
 "set magic
 
@@ -108,10 +107,20 @@ function! NERDTree_IsValid()
 endfunction
 
 "===========
+" Tag list
+"===========
+
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+"===========
 " winmanager
 "===========
 
-let g:winManagerWindowLayout="NERDTree"
+let g:winManagerWidth=30
+let g:winManagerWindowLayout="NERDTree|TagList"
+let g:persistentBehaviour=0
 
 "nnoremap <c-w><c-f> :FirstExplorerWindow<cr>
 "nnoremap <c-w><c-b> :BottomExplorerWindow<cr>
