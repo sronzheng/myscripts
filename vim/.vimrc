@@ -47,11 +47,7 @@ nnoremap <leader>w :w<cr>
 
 filetype plugin indent on
 syntax on
-colorscheme evening
-"colorscheme default
-"colorscheme desert
-"colorscheme murphy
-"colorscheme darkblue
+colorscheme torte
 
 " search
 set ignorecase
