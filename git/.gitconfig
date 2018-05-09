@@ -1,0 +1,21 @@
+[user]
+	name = sronzheng 
+	email = aronzheng2011@163.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[alias]
+    # %h:  abbreviated commit hash
+    # %d:  ref names
+    # %s:  subject
+    # %cr: commit date, relative
+    # %an: author name
+    lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' 
+    lgd = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' 
+    lgr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
