@@ -160,6 +160,9 @@ syntax on
 " vim plugin 
 """""""""""""""
 
+nmap <C-n> :cnext <CR>
+nmap <C-p> :cprev <CR>
+
 "===========
 " cscope
 "===========
