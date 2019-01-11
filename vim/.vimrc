@@ -185,9 +185,9 @@ cscope add cscope.out
 "===========
 
 let g:miniBufExplMapWindowNavVim=1
-let g:miniBufExplMapWindowNavArrows=1
+"let g:miniBufExplMapWindowNavArrows=1
 let g:miniBufExplMapCTabSwitchBufs=1
-let g:miniBufExplModeSelTarget=1
+"let g:miniBufExplModeSelTarget=1
 let g:miniBufExplMoreThanOne=0
 
 "===========
