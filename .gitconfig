@@ -1,25 +1,35 @@
 [user]
 	name = ronzheng 
 	email = ronzheng@none.com
+
 [core]
 	editor = vim
+
 [merge]
 	tool = vimdiff
+    
 [color]
 	status = auto
 	diff = auto
 	branch = auto
 	interactive = auto
+
 [alias]
 
     unstage = reset HEAD --
     last = log -1 HEAD
 
+    # 
     # %h:  abbreviated commit hash
     # %d:  ref names
     # %s:  subject
+    # %cd: commit date, absolute
     # %cr: commit date, relative
     # %an: author name
+    # %Cred: switch color to red
+    # %Creset: reset color
+    # %C(yello) switch to yellow
+    #
     lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' 
     lgd = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' 
     lgr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
