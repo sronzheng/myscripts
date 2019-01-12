@@ -155,13 +155,60 @@ filetype plugin indent on
 " enable syntax
 syntax on
 
+" quickfix keys
+nmap <C-n> :cnext <CR>
+nmap <C-p> :cprev <CR>
+
 
 """""""""""""""
 " vim plugin 
 """""""""""""""
 
-nmap <C-n> :cnext <CR>
-nmap <C-p> :cprev <CR>
+"===========
+" NERD_tree
+"=========== 
+
+"===========
+" Tag list
+"===========
+
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+"===========
+" winmanager
+"===========
+
+let g:winManagerWidth=35
+let g:persistentBehaviour=0
+
+"nnoremap <c-w><c-f> :FirstExplorerWindow<cr>
+"nnoremap <c-w><c-b> :BottomExplorerWindow<cr>
+nmap <c-w><c-t> :WMToggle<cr>
+
+" add NERD_tree and taglist
+function! NERDTree_Start()
+    exec 'NERDTree'
+endfunction
+
+function! NERDTree_IsValid()
+    return 1
+endfunction
+
+let g:NERDTree_title='NERDTree'
+let g:winManagerWindowLayout='NERDTree|TagList'
+
+"===========
+" miniBufExplorer
+"===========
+
+let g:miniBufExplMapWindowNavVim=1
+"let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplMapCTabSwitchBufs=1
+"let g:miniBufExplModeSelTarget=1
+let g:miniBufExplMoreThanOne=0
 
 "===========
 " cscope
@@ -179,52 +226,5 @@ nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e- 
 
 cscope add cscope.out
-
-"===========
-" miniBufExplorer
-"===========
-
-let g:miniBufExplMapWindowNavVim=1
-"let g:miniBufExplMapWindowNavArrows=1
-let g:miniBufExplMapCTabSwitchBufs=1
-"let g:miniBufExplModeSelTarget=1
-let g:miniBufExplMoreThanOne=0
-
-"===========
-" NERDTree
-"===========
-let g:NERDTree_title="[NERDTree]"
-
-function! NERDTree_Start()
-    exec 'NERDTree'
-endfunction
-
-function! NERDTree_IsValid()
-    return 1
-endfunction
-
-"===========
-" Tag list
-"===========
-
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-"===========
-" winmanager
-"===========
-
-let g:winManagerWidth=35
-let g:winManagerWindowLayout="NERDTree|TagList"
-let g:persistentBehaviour=0
-
-"nnoremap <c-w><c-f> :FirstExplorerWindow<cr>
-"nnoremap <c-w><c-b> :BottomExplorerWindow<cr>
-nmap <c-w><c-t> :WMToggle<cr>
-
-"set tags=/home/ron/res/gstreamer-0.10.35/tags,/home/ron/res/gst-plugins-base-0.10.35/tags,/home/ron/res/gst-plugins-good-0.10.30/tags,/home/ron/res/gst-plugins-ugly-0.10.10/tags,/home/ron/res/gst-ffmpeg-0.10.10/tags
-
-"cs add /home/ron/res/gstreamer-0.10.35/cscope.out
 
 set path=./**
