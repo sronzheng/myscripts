@@ -212,20 +212,6 @@ let Tlist_Exit_OnlyWindow=1
 nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "===========
-" lookupfile
-"===========
-
-let g:LookupFile_MinPatLength=2
-let g:LookupFile_PreservePattern=0
-let g:LookupFile_PreservePatternHistory=1
-let g:LookupFile_AlwaysAcceptFirst=1
-let g:LookupFile_AllowNewFiles=0
-
-nmap <silent> <leader>lk :LUTags<cr>
-nmap <silent> <leader>ll :LUBufs<cr>
-nmap <silent> <leader>lw :LUWalk<cr>
-
-"===========
 " winmanager
 "===========
 
