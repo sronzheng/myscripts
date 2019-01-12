@@ -1,6 +1,6 @@
 [user]
-	name = sronzheng 
-	email = aronzheng2011@163.com
+	name = ronzheng 
+	email = ronzheng@none.com
 [core]
 	editor = vim
 [merge]
@@ -11,6 +11,10 @@
 	branch = auto
 	interactive = auto
 [alias]
+
+    unstage = 'reset HEAD --'
+    last = 'log -1 HEAD'
+
     # %h:  abbreviated commit hash
     # %d:  ref names
     # %s:  subject
