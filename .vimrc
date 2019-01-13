@@ -155,14 +155,36 @@ filetype plugin indent on
 " enable syntax
 syntax on
 
-" quickfix keys
-nmap <C-n> :cnext <CR>
-nmap <C-p> :cprev <CR>
+"===========
+" ctags
+"===========
 
+nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
-"""""""""""""""
-" vim plugin 
-"""""""""""""""
+"===========
+" cscope
+"===========
+
+"nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"nmap <C-@>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+"nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+set cscopequickfix=s-,c-,d-,i-,t-,e- 
+
+cscope add cscope.out
+
+"===========
+" quickfix
+"=========== 
+
+nmap <c-n> :cnext <CR>
+nmap <c-p> :cprev <CR>
+
 
 "===========
 " NERD_tree
@@ -175,7 +197,6 @@ nmap <C-p> :cprev <CR>
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
-nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "===========
 " winmanager
@@ -210,21 +231,4 @@ let g:miniBufExplMapCTabSwitchBufs=1
 "let g:miniBufExplModeSelTarget=1
 let g:miniBufExplMoreThanOne=0
 
-"===========
-" cscope
-"===========
 
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
-set cscopequickfix=s-,c-,d-,i-,t-,e- 
-
-cscope add cscope.out
-
-set path=./**
