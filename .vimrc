@@ -156,6 +156,13 @@ filetype plugin indent on
 syntax on
 
 "===========
+" quickfix
+"=========== 
+
+nmap <c-n> :cnext <CR>
+nmap <c-p> :cprev <CR>
+
+"===========
 " ctags
 "===========
 
@@ -177,14 +184,6 @@ nmap <c-c> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e- 
 
 cscope add cscope.out
-
-"===========
-" quickfix
-"=========== 
-
-nmap <c-n> :cnext <CR>
-nmap <c-p> :cprev <CR>
-
 
 "===========
 " NERD_tree
@@ -222,7 +221,7 @@ let g:NERDTree_title='NERDTree'
 let g:winManagerWindowLayout='NERDTree|TagList'
 
 "===========
-" miniBufExplorer
+" minibufexpl
 "===========
 
 let g:miniBufExplMapWindowNavVim=1
