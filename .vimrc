@@ -230,4 +230,19 @@ let g:miniBufExplMapCTabSwitchBufs=1
 "let g:miniBufExplModeSelTarget=1
 let g:miniBufExplMoreThanOne=0
 
+"===========
+" OmniCppComplete
+"===========
+
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1
+let OmniCpp_MayCompleteDot = 1
+let OmniCpp_MayCompleteArrow = 1
+let OmniCpp_MayCompleteScope = 1
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
+
 
