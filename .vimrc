@@ -159,8 +159,8 @@ syntax on
 " quickfix
 "=========== 
 
-nmap <c-n> :cnext <CR>
-nmap <c-p> :cprev <CR>
+nmap <f3> :cnext <CR>
+nmap <f4> :cprev <CR>
 
 "===========
 " ctags
@@ -195,7 +195,6 @@ cscope add cscope.out
 
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
-
 
 "===========
 " winmanager
@@ -244,5 +243,9 @@ let OmniCpp_MayCompleteScope = 1
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
+
+"===========
+" ctrlp
+"===========
 
 
