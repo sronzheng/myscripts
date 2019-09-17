@@ -252,4 +252,5 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 " ctrlp
 "===========
 
+let g:ctrlp_working_path_mode = ''
 
